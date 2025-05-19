@@ -44,7 +44,7 @@ const search = async() => {
             throw new Error (`Veuillez rentrer le nom d'une ville`);
         }
 
-        const url = `http://api.weatherapi.com/v1/current.json?key=${API}&q=${city}&aqi=no`
+        const url = `https://api.weatherapi.com/v1/current.json?key=${API}&q=${city}&aqi=no`
         const response = await fetch(url);
         const data = await response.json(); 
         if(data.error){
